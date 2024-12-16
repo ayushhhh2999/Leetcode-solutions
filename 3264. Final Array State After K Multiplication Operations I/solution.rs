@@ -10,12 +10,10 @@ impl Solution {
            let (mut val,idx) = min_heap.pop().unwrap_or((0,0));
            val *= multiplier;
            min_heap.push((val,idx));
-        }
-        while min_heap.len() > 0{
-            let (val,idx) = min_heap.pop().unwrap_or((0,0));
-            let idx = -idx as i32;
+           let idx = -idx as i32;
             nums[idx as usize] = -val;
         }
+        
         nums
     }
 }

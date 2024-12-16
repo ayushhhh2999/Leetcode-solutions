@@ -7,8 +7,7 @@ class Solution:
                 val , index = heapq.heappop(heap)
                 val *= multiplier 
                 heapq.heappush(heap,(val,index))
-        while heap:
-            val,index = heapq.heappop(heap)
-            nums[index] = val
+                nums[index] = val
+       
         return nums            
         
